@@ -25,6 +25,7 @@ class PostListView(ListView):
     template_name = 'blog/post/list.html'
 
 
+
 def post_detail(request, year, month, day, post):
     post = get_object_or_404(Post, slug=post, status='published', publish__year=year, publish__month=month,
                              publish__day=day)
